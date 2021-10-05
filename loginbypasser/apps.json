@@ -1,0 +1,115 @@
+{
+    "version": "20211005",
+    "apps": [
+        {
+            "name": "Pinterest",
+            "url": "https://*.pinterest.com/pin/*",
+            "icon": "img/apps/pinterest.png",
+            "enabled": true,
+            "elements": [
+                {
+                    "selector": "div[data-test-id=\"giftWrap\"]",
+                    "action": "remove parent"
+                }
+            ]
+        },
+        {
+            "name": "Jobinja",
+            "url": "https://*.jobinja.ir/*",
+            "icon": "img/apps/jobinja.png",
+            "enabled": true,
+            "elements": [
+                {
+                    "selector": ".c-forceToLogin__content",
+                    "action": "style",
+                    "css": [
+                        {
+                            "name": "filter",
+                            "value": "none"
+                        },
+                        {
+                            "name": "-webkit-filter",
+                            "value": "none"
+                        }
+                    ]
+                },
+                {
+                    "selector": ".c-forceToLogin__message",
+                    "action": "remove"
+                },
+                {
+                    "selector": ".c-forceToLogin__overlay",
+                    "action": "remove"
+                }
+            ]
+        },
+        {
+            "name": "Dribbble",
+            "url": "https://*.dribbble.com/*",
+            "icon": "img/apps/dribbble.png",
+            "enabled": true,
+            "elements": [
+                {
+                    "selector": "a.dribbble-link[data-subject=\"Screenshot\"]",
+                    "action": "void",
+                    "func": "listItems"
+                }
+            ],
+            "module": "dribbble"
+        },
+        {
+            "name": "Quora",
+            "url": "https://*.quora.com/*",
+            "icon": "img/apps/quora.png",
+            "enabled": true,
+            "elements": [
+                {
+                    "selector": "div.qu-zIndex--modal_desktop:first-of-type",
+                    "action": "remove"
+                },
+                {
+                    "selector": "div.qu-overflow--hidden:first-of-type",
+                    "action": "attr",
+                    "attributes": [
+                        {
+                            "name": "style",
+                            "value": ""
+                        }
+                    ]
+                }
+            ],
+            "module": "quora"
+        },
+        {
+            "name": "Instagram",
+            "url": "https://*.instagram.com/*",
+            "icon": "img/apps/instagram.png",
+            "enabled": true,
+            "elements": [
+                {
+                    "selector": "._Yhr4",
+                    "action": "style",
+                    "css": [
+                        {
+                            "name": "display",
+                            "value": "none"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Bama",
+            "url": "https://*.bama.ir/*",
+            "icon": "img/apps/bama.png",
+            "enabled": true,
+            "elements": [
+                {
+                    "selector": ".cost.blured",
+                    "action": "remove class",
+                    "class": "blured"
+                }
+            ]
+        }
+    ]
+}
