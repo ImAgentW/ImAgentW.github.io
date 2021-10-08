@@ -1,9 +1,9 @@
 {
-    "version": "20211005",
+    "version": "20211008",
     "apps": [
         {
             "name": "Pinterest",
-            "url": "https://*.pinterest.com/pin/*",
+            "url": "https://*.pinterest.com/*",
             "icon": "img/apps/pinterest.png",
             "enabled": true,
             "elements": [
